@@ -156,7 +156,7 @@
     </g>
     <g mask="url(#rev5)">
       <text class="mono" x="28" y="232"
-            textLength="630" lengthAdjust="spacing"><tspan class="warn">● </tspan><tspan class="lit">open to work</tspan><tspan class="out">  6 featured projects · 154 tests written · 19,087 lines</tspan></text>
+            textLength="630" lengthAdjust="spacing"><tspan class="warn">● </tspan><tspan class="lit">open to work</tspan><tspan class="out">  7 featured projects · 154 tests written · 36,674 lines</tspan></text>
     </g>
     <rect class="caret" x="660" y="219" width="9" height="17"/>
 
@@ -174,7 +174,7 @@
             fill="none"/>
       <text class="mono" x="70" y="282" font-size="12"
             textLength="72.0" lengthAdjust="spacing"
-            fill="#6E6A5F">6 projects</text>
+            fill="#6E6A5F">7 projects</text>
       <rect x="156" y="268" width="1" height="18" fill="#DED9CD"/>
       <rect x="156" y="262" width="92" height="30"
             fill="none"/>

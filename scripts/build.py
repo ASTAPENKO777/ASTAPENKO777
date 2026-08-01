@@ -237,6 +237,9 @@ def main() -> int:
             continue
         projects.append(
             {
+                # `live` is optional in projects.yml; default it here so the
+                # template (which runs under StrictUndefined) can just test it.
+                "live": None,
                 **entry,
                 "url": live["url"],
                 "pushed": live.get("pushed"),

@@ -8,6 +8,7 @@
 
 | Project | What it does | Stack | Size | Tests | Updated |
 | --- | --- | --- | --- | --- | --- |
+| **[Лісова Хатина](https://github.com/ASTAPENKO777/lisova-hatuna)** · [live](https://www.lisova-hatuna.com) | Live booking site — Telegram Mini App admin, AI chat, iCal sync | Flask + Groq | 17,587 LOC | — | 2026-08-01 |
 | **[Wine Marketplace](https://github.com/ASTAPENKO777/_VINO_)** | Catalog with filtering, cart, checkout, review moderation | Django 5 | 6,462 LOC | 116 | 2026-08-01 |
 | **[LeanPlate](https://github.com/ASTAPENKO777/leanplate-ios)** | Calorie targets from Mifflin-St Jeor, recipes, weight charts | SwiftUI + SwiftData | 3,788 LOC | — | 2026-08-01 |
 | **[Tournament API](https://github.com/ASTAPENKO777/final_project)** | REST API with WebSocket chat, layered routers/models/schemas | FastAPI | 353 LOC | 38 | 2026-08-01 |
@@ -31,11 +32,11 @@
 ### `$ git log --oneline -5`
 
 ```
+e9fa69f  lisova-hatuna  Initial commit — Lisova Hatyna booking site
 8f14643  leanplate-ios  Add nutrition tracking features, README and Xcode gitignore
 ffc0d61  _VINO_         Add 116-test suite and fix three bugs it uncovered
 a5837f5  final_project  Add pytest test suite and fix unhandled WebSocket disconnect
 491246f  crupto_bot     Move secrets to environment variables
-6aa19b0  leanplate-ios  Initial Commit
 ```
 
 ### `$ contact`

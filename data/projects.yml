@@ -29,6 +29,14 @@ stack:
 #   tests  -- number of automated tests, or 0
 #   live   -- production URL, omit if none
 projects:
+  - repo: lisova-hatuna
+    title: Лісова Хатина
+    blurb: Live booking site — Telegram Mini App admin, AI chat, iCal sync
+    stack: Flask + Groq
+    loc: 17587
+    tests: 0
+    live: https://www.lisova-hatuna.com
+
   - repo: _VINO_
     title: Wine Marketplace
     blurb: Catalog with filtering, cart, checkout, review moderation

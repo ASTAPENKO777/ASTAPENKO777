@@ -9,7 +9,7 @@
 | Project | What it does | Stack | Size | Tests | Updated |
 | --- | --- | --- | --- | --- | --- |
 {% for p in projects -%}
-| **[{{ p.title }}]({{ p.url }})** | {{ p.blurb }} | {{ p.stack }} | {{ '{:,}'.format(p.loc) }} LOC | {{ p.tests if p.tests else '—' }} | {{ p.pushed_human }} |
+| **[{{ p.title }}]({{ p.url }})**{% if p.live %} · [live]({{ p.live }}){% endif %} | {{ p.blurb }} | {{ p.stack }} | {{ '{:,}'.format(p.loc) }} LOC | {{ p.tests if p.tests else '—' }} | {{ p.pushed_human }} |
 {% endfor %}
 ### `$ cat stack.txt`
 
