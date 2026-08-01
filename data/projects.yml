@@ -1,0 +1,72 @@
+# Source of truth for the generated profile README.
+#
+# Everything here is hand-maintained. Live values (last push, stars, primary
+# language) are fetched from the GitHub API at build time and are NOT stored
+# here -- see scripts/build.py.
+#
+# Regenerate after editing:  python scripts/build.py
+
+owner: ASTAPENKO777
+
+identity:
+  name: Mykhailo Astapenko
+  role: backend developer
+  location: Ukraine
+  email: kaktusbloog@gmail.com
+  status: open to work
+
+# Shown in the banner and in `$ cat stack.txt`.
+stack:
+  Languages: [Python, Swift, TypeScript, SQL]
+  Backend: [Django, FastAPI, Flask, SQLAlchemy, Pydantic]
+  Mobile: [SwiftUI, SwiftData, SpriteKit]
+  Testing: [pytest, Django test framework]
+  Data: [PostgreSQL, SQLite]
+
+# Featured projects, in display order.
+#   repo   -- name under `owner`; live stats are fetched for it
+#   loc    -- lines of code, counted by hand (the API cannot give this)
+#   tests  -- number of automated tests, or 0
+#   live   -- production URL, omit if none
+projects:
+  - repo: _VINO_
+    title: Wine Marketplace
+    blurb: Catalog with filtering, cart, checkout, review moderation
+    stack: Django 5
+    loc: 6462
+    tests: 116
+
+  - repo: leanplate-ios
+    title: LeanPlate
+    blurb: Calorie targets from Mifflin-St Jeor, recipes, weight charts
+    stack: SwiftUI + SwiftData
+    loc: 3788
+    tests: 0
+
+  - repo: final_project
+    title: Tournament API
+    blurb: REST API with WebSocket chat, layered routers/models/schemas
+    stack: FastAPI
+    loc: 353
+    tests: 38
+
+  - repo: endless-jumper-ios
+    title: Endless Jumper
+    blurb: Arcade game with skin shop, unlockable maps, 8 languages
+    stack: Swift + SpriteKit
+    loc: 6643
+    tests: 0
+
+  - repo: crupto_bot
+    title: Crypto Bot
+    blurb: Live prices, matplotlib charts, price alerts, UA/EN
+    stack: python-telegram-bot
+    loc: 716
+    tests: 0
+
+  - repo: My-game-play
+    title: Block Tycoon
+    blurb: Tetris-style puzzle shipped as an installable PWA
+    stack: Vanilla JS
+    loc: 1125
+    tests: 0

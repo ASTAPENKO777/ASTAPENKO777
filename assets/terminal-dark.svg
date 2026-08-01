@@ -1,0 +1,195 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="292"
+     viewBox="0 0 900 292" role="img" aria-label="Terminal banner — Mykhailo Astapenko, backend developer from Ukraine. open to work.">
+  <title>Terminal banner — Mykhailo Astapenko, backend developer from Ukraine. open to work.</title>
+
+  <defs>
+    <clipPath id="frame">
+      <rect x="1" y="1" width="898" height="290" rx="10"/>
+    </clipPath>
+    <mask id="rev0">
+      <rect class="r0" x="28" y="58"
+            width="72" height="22" fill="#fff"/>
+    </mask>
+    <mask id="rev1">
+      <rect class="r1" x="28" y="84"
+            width="432" height="22" fill="#fff"/>
+    </mask>
+    <mask id="rev2">
+      <rect class="r2" x="28" y="124"
+            width="135" height="22" fill="#fff"/>
+    </mask>
+    <mask id="rev3">
+      <rect class="r3" x="28" y="150"
+            width="414" height="22" fill="#fff"/>
+    </mask>
+    <mask id="rev4">
+      <rect class="r4" x="28" y="190"
+            width="72" height="22" fill="#fff"/>
+    </mask>
+    <mask id="rev5">
+      <rect class="r5" x="28" y="216"
+            width="630" height="22" fill="#fff"/>
+    </mask>
+
+    <pattern id="scan" width="1" height="3" patternUnits="userSpaceOnUse">
+      <rect width="1" height="1" fill="#FFFFFF"/>
+    </pattern>
+  </defs>
+
+  <style>
+    .mono {
+      font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas,
+                   "DejaVu Sans Mono", monospace;
+      font-size: 15px;
+      white-space: pre;
+    }
+    .chrome  { font-size: 12px; fill: #6B7787; }
+    .prompt  { fill: #7FE7C4; }
+    .cmd     { fill: #D3DCE8; }
+    .out     { fill: #6B7787; }
+    .lit     { fill: #D3DCE8; }
+    .warn    { fill: #F2B45C; }
+
+    @keyframes k0 {
+      from { transform: translateX(-72px); }
+      to   { transform: translateX(0); }
+    }
+    .r0 {
+      animation: k0 0.18s
+                 steps(8) 0.28s both;
+    }
+    @keyframes k1 {
+      from { transform: translateX(-432px); }
+      to   { transform: translateX(0); }
+    }
+    .r1 {
+      animation: k1 0.86s
+                 steps(48) 0.58s both;
+    }
+    @keyframes k2 {
+      from { transform: translateX(-135px); }
+      to   { transform: translateX(0); }
+    }
+    .r2 {
+      animation: k2 0.27s
+                 steps(15) 1.56s both;
+    }
+    @keyframes k3 {
+      from { transform: translateX(-414px); }
+      to   { transform: translateX(0); }
+    }
+    .r3 {
+      animation: k3 0.83s
+                 steps(46) 1.95s both;
+    }
+    @keyframes k4 {
+      from { transform: translateX(-72px); }
+      to   { transform: translateX(0); }
+    }
+    .r4 {
+      animation: k4 0.18s
+                 steps(8) 2.90s both;
+    }
+    @keyframes k5 {
+      from { transform: translateX(-630px); }
+      to   { transform: translateX(0); }
+    }
+    .r5 {
+      animation: k5 1.26s
+                 steps(70) 3.20s both;
+    }
+    @keyframes blink { 0%, 49% { opacity: 1; } 50%, 100% { opacity: 0; } }
+    .caret {
+      fill: #7FE7C4;
+      /* Hidden until its line has been typed. `forwards` rather than `both`
+         keeps this base opacity during the delay -- `both` would apply the
+         keyframe's 0% state instead and leave a block glowing in empty space. */
+      opacity: 0;
+      animation: blink 1.06s steps(1) 4.68s infinite forwards;
+    }
+
+    @keyframes rule { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+    .rule { transform-origin: 28px 0; animation: rule .5s ease-out .05s both; }
+
+    @keyframes rise { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+    .status { animation: rise .45s ease-out 4.58s both; }
+
+    @media (prefers-reduced-motion: reduce) {
+      .r0, .r1, .r2, .r3, .r4, .r5, .r6, .r7, .r8,
+      .rule, .status { animation: none !important; transform: none !important; }
+      .caret { animation: none !important; }
+    }
+  </style>
+
+  <g clip-path="url(#frame)">
+    <rect width="900" height="292" fill="#0B0E14"/>
+    <rect width="900" height="292" fill="url(#scan)" opacity="0.018"/>
+
+    <!-- window chrome -->
+    <rect width="900" height="34" fill="#121821"/>
+    <circle cx="20" cy="17" r="4.5" fill="#7FE7C4" opacity=".85"/>
+    <circle cx="36" cy="17" r="4.5" fill="#222B38"/>
+    <circle cx="52" cy="17" r="4.5" fill="#222B38"/>
+    <text class="mono chrome" x="450.0" y="22" text-anchor="middle">astapenko777@github — ~/profile</text>
+    <rect class="rule" x="28" y="34" width="844" height="1" fill="#7FE7C4" opacity=".45"/>
+
+    <!-- session -->
+    <g mask="url(#rev0)">
+      <text class="mono" x="28" y="74"
+            textLength="72" lengthAdjust="spacing"><tspan class="prompt">$ </tspan><tspan class="cmd">whoami</tspan></text>
+    </g>
+    <g mask="url(#rev1)">
+      <text class="mono" x="28" y="100"
+            textLength="432" lengthAdjust="spacing"><tspan class="lit">Mykhailo Astapenko · backend developer · Ukraine</tspan></text>
+    </g>
+    <g mask="url(#rev2)">
+      <text class="mono" x="28" y="140"
+            textLength="135" lengthAdjust="spacing"><tspan class="prompt">$ </tspan><tspan class="cmd">cat stack.txt</tspan></text>
+    </g>
+    <g mask="url(#rev3)">
+      <text class="mono" x="28" y="166"
+            textLength="414" lengthAdjust="spacing"><tspan class="out">Python · Swift · TypeScript · Django · FastAPI</tspan></text>
+    </g>
+    <g mask="url(#rev4)">
+      <text class="mono" x="28" y="206"
+            textLength="72" lengthAdjust="spacing"><tspan class="prompt">$ </tspan><tspan class="cmd">status</tspan></text>
+    </g>
+    <g mask="url(#rev5)">
+      <text class="mono" x="28" y="232"
+            textLength="630" lengthAdjust="spacing"><tspan class="warn">● </tspan><tspan class="lit">open to work</tspan><tspan class="out">  6 featured projects · 154 tests written · 19,087 lines</tspan></text>
+    </g>
+    <rect class="caret" x="660" y="219" width="9" height="17"/>
+
+    <!-- status bar -->
+    <g class="status">
+      <rect x="0" y="262" width="900" height="30" fill="#121821"/>
+      <rect x="0" y="262" width="900" height="1" fill="#222B38"/>
+      <rect x="0" y="262" width="56" height="30"
+            fill="#7FE7C4"/>
+      <text class="mono" x="14" y="282" font-size="12"
+            textLength="28.8" lengthAdjust="spacing"
+            fill="#06231B">MAIN</text>
+      <rect x="56" y="268" width="1" height="18" fill="#222B38"/>
+      <rect x="56" y="262" width="100" height="30"
+            fill="none"/>
+      <text class="mono" x="70" y="282" font-size="12"
+            textLength="72.0" lengthAdjust="spacing"
+            fill="#6B7787">6 projects</text>
+      <rect x="156" y="268" width="1" height="18" fill="#222B38"/>
+      <rect x="156" y="262" width="92" height="30"
+            fill="none"/>
+      <text class="mono" x="170" y="282" font-size="12"
+            textLength="64.8" lengthAdjust="spacing"
+            fill="#6B7787">154 tests</text>
+      <rect x="248" y="268" width="1" height="18" fill="#222B38"/>
+      <rect x="248" y="262" width="157" height="30"
+            fill="none"/>
+      <text class="mono" x="262" y="282" font-size="12"
+            textLength="129.6" lengthAdjust="spacing"
+            fill="#6B7787">updated 2026-08-01</text>
+    </g>
+
+    <rect x=".5" y=".5" width="899" height="291" rx="10"
+          fill="none" stroke="#222B38"/>
+  </g>
+</svg>
