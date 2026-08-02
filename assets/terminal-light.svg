@@ -151,7 +151,7 @@
     </g>
     <g mask="url(#rev5)">
       <text class="mono" x="28" y="232"
-            textLength="639" lengthAdjust="spacing"><tspan class="warn">● </tspan><tspan class="lit">open to work</tspan><tspan class="out">  7 featured projects · 154 tests written · 36,674 lines</tspan><tspan class="caret">█</tspan></text>
+            textLength="639" lengthAdjust="spacing"><tspan class="warn">● </tspan><tspan class="lit">open to work</tspan><tspan class="out">  9 featured projects · 154 tests written · 45,002 lines</tspan><tspan class="caret">█</tspan></text>
     </g>
 
     <!-- status bar -->
@@ -168,7 +168,7 @@
             fill="none"/>
       <text class="mono" x="74" y="282" font-size="12"
             textLength="80.0" lengthAdjust="spacing"
-            fill="#6E6A5F">7 projects</text>
+            fill="#6E6A5F">9 projects</text>
       <rect x="168" y="268" width="1" height="18" fill="#DED9CD"/>
       <rect x="168" y="262" width="100" height="30"
             fill="none"/>
@@ -180,7 +180,7 @@
             fill="none"/>
       <text class="mono" x="282" y="282" font-size="12"
             textLength="144.0" lengthAdjust="spacing"
-            fill="#6E6A5F">updated 2026-08-01</text>
+            fill="#6E6A5F">updated 2026-08-02</text>
     </g>
 
     <rect x=".5" y=".5" width="899" height="291" rx="10"

@@ -37,6 +37,14 @@ projects:
     tests: 0
     live: https://www.lisova-hatuna.com
 
+  - repo: blackmagic-cam
+    title: BlackmagicCam
+    blurb: Paid guide storefront — card + USDT checkout, EN/RU/AR with RTL
+    stack: Flask + Vercel
+    loc: 7921
+    tests: 0
+    live: https://blackmagiccam.vercel.app
+
   - repo: _VINO_
     title: Wine Marketplace
     blurb: Catalog with filtering, cart, checkout, review moderation
@@ -70,6 +78,13 @@ projects:
     blurb: Live prices, matplotlib charts, price alerts, UA/EN
     stack: python-telegram-bot
     loc: 716
+    tests: 0
+
+  - repo: cassa-telegram-bot
+    title: Cassa Bot
+    blurb: Group tally bot — parses payouts from chat, SQLite on a Fly.io volume
+    stack: Docker + Fly.io
+    loc: 407
     tests: 0
 
   - repo: My-game-play
