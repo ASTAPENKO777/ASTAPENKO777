@@ -39,7 +39,15 @@ W = 900
 PAD = 28
 FONT = 15
 CELL = 9           # advance width of one character at FONT
-STATUS_CELL = 7.2  # ... and at the 12px status-bar size
+STATUS_CELL = 8.0  # ... at the 12px status-bar size, with headroom for wider
+                   # fonts so the segments cannot overlap
+# Reveal masks run this much past the nominal text width. Measured in a browser
+# with textLength stripped: at 0.22 the banner tolerates a font ~21% wider than
+# the 9px/char assumed here. Safari (which ignores textLength) overflowed by ~4%.
+# The cost is a brief pause once a line finishes typing -- far less noticeable
+# than a clipped word.
+MASK_SLACK = 0.22
+CARET = "█"   # FULL BLOCK — present in every common monospace font
 FIRST_Y = 74
 LINE_H = 26
 BLANK_H = 14
@@ -169,7 +177,11 @@ def build_lines(identity: dict, stack: dict, totals: dict) -> tuple[list[dict], 
         [(stack_line, "out")],
         None,
         [("$ ", "prompt"), ("status", "cmd")],
-        [("● ", "warn"), (identity["status"], "lit"), (f"  {summary}", "out")],
+        # The caret is a glyph in the text flow, not a positioned rectangle, so
+        # it always sits immediately after the last character regardless of how
+        # wide the viewer's monospace font actually is.
+        [("● ", "warn"), (identity["status"], "lit"), (f"  {summary}", "out"),
+         (CARET, "caret")],
     ]
 
     lines: list[dict] = []
@@ -180,12 +192,17 @@ def build_lines(identity: dict, stack: dict, totals: dict) -> tuple[list[dict], 
             y += BLANK_H
             continue
         chars = sum(len(text) for text, _ in row)
+        width = chars * CELL
         duration = max(0.18, chars * 0.018)
         lines.append(
             {
                 "y": y,
                 "chars": chars,
-                "width": chars * CELL,
+                "width": width,
+                # Safari ignores textLength on <text>, so the line can render
+                # wider than chars*CELL. Without slack the reveal mask clips the
+                # tail ("Ukraine" -> "Ukrair"). MASK_SLACK covers that overflow.
+                "mask_width": round(width * (1 + MASK_SLACK)),
                 "dur": duration,
                 "delay": delay,
                 "segments": [{"text": text, "cls": cls} for text, cls in row],
@@ -194,10 +211,7 @@ def build_lines(identity: dict, stack: dict, totals: dict) -> tuple[list[dict], 
         delay += duration + 0.12
         y += LINE_H
 
-    last = lines[-1]
-    caret_x = PAD + last["width"] + 2  # 2px so the block never kisses the last glyph
-    caret_y = last["y"] - 13
-    return lines, delay, delay + 0.1, caret_x, caret_y
+    return lines, delay
 
 
 def build_status(totals: dict, updated: str) -> list[dict]:
@@ -270,7 +284,7 @@ def main() -> int:
         keep_trailing_newline=True,
     )
 
-    lines, status_delay, caret_delay, caret_x, caret_y = build_lines(identity, stack, totals)
+    lines, status_delay = build_lines(identity, stack, totals)
     status = build_status(totals, last_activity)
     # Height follows the content instead of being fixed, so adding or removing
     # a line never leaves a band of dead space above the status bar.
@@ -285,9 +299,6 @@ def main() -> int:
             lines=lines,
             status=status,
             status_delay=status_delay,
-            caret_delay=caret_delay,
-            caret_x=caret_x,
-            caret_y=caret_y,
             chrome_title=f"{owner.lower()}@github — ~/profile",
             alt=alt,
         )

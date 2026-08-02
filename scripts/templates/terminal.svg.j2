@@ -22,7 +22,7 @@
     {%- for line in lines %}
     <mask id="rev{{ loop.index0 }}">
       <rect class="r{{ loop.index0 }}" x="{{ PAD }}" y="{{ line.y - 16 }}"
-            width="{{ line.width }}" height="22" fill="#fff"/>
+            width="{{ line.mask_width }}" height="22" fill="#fff"/>
     </mask>
     {%- endfor %}
 
@@ -47,7 +47,7 @@
 
     {% for line in lines -%}
     @keyframes k{{ loop.index0 }} {
-      from { transform: translateX(-{{ line.width }}px); }
+      from { transform: translateX(-{{ line.mask_width }}px); }
       to   { transform: translateX(0); }
     }
     .r{{ loop.index0 }} {
@@ -57,14 +57,10 @@
     {% endfor -%}
 
     @keyframes blink { 0%, 49% { opacity: 1; } 50%, 100% { opacity: 0; } }
-    .caret {
-      fill: {{ c.accent }};
-      /* Hidden until its line has been typed. `forwards` rather than `both`
-         keeps this base opacity during the delay -- `both` would apply the
-         keyframe's 0% state instead and leave a block glowing in empty space. */
-      opacity: 0;
-      animation: blink 1.06s steps(1) {{ '%.2f'|format(caret_delay) }}s infinite forwards;
-    }
+    /* The caret is the last glyph of the last line, so the reveal mask keeps it
+       hidden until that line has finished typing -- no delay to calculate, and
+       no chance of it floating in empty space. */
+    .caret { fill: {{ c.accent }}; animation: blink 1.06s steps(1) infinite; }
 
     @keyframes rule { from { transform: scaleX(0); } to { transform: scaleX(1); } }
     .rule { transform-origin: {{ PAD }}px 0; animation: rule .5s ease-out .05s both; }
@@ -74,8 +70,7 @@
 
     @media (prefers-reduced-motion: reduce) {
       .r0, .r1, .r2, .r3, .r4, .r5, .r6, .r7, .r8,
-      .rule, .status { animation: none !important; transform: none !important; }
-      .caret { animation: none !important; }
+      .rule, .status, .caret { animation: none !important; transform: none !important; }
     }
   </style>
 
@@ -98,7 +93,6 @@
             textLength="{{ line.width }}" lengthAdjust="spacing">{% for s in line.segments %}<tspan class="{{ s.cls }}">{{ s.text | e }}</tspan>{% endfor %}</text>
     </g>
     {%- endfor %}
-    <rect class="caret" x="{{ caret_x }}" y="{{ caret_y }}" width="{{ CELL }}" height="17"/>
 
     <!-- status bar -->
     <g class="status">

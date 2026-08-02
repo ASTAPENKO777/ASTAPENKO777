@@ -8,27 +8,27 @@
     </clipPath>
     <mask id="rev0">
       <rect class="r0" x="28" y="58"
-            width="72" height="22" fill="#fff"/>
+            width="88" height="22" fill="#fff"/>
     </mask>
     <mask id="rev1">
       <rect class="r1" x="28" y="84"
-            width="432" height="22" fill="#fff"/>
+            width="527" height="22" fill="#fff"/>
     </mask>
     <mask id="rev2">
       <rect class="r2" x="28" y="124"
-            width="135" height="22" fill="#fff"/>
+            width="165" height="22" fill="#fff"/>
     </mask>
     <mask id="rev3">
       <rect class="r3" x="28" y="150"
-            width="414" height="22" fill="#fff"/>
+            width="505" height="22" fill="#fff"/>
     </mask>
     <mask id="rev4">
       <rect class="r4" x="28" y="190"
-            width="72" height="22" fill="#fff"/>
+            width="88" height="22" fill="#fff"/>
     </mask>
     <mask id="rev5">
       <rect class="r5" x="28" y="216"
-            width="630" height="22" fill="#fff"/>
+            width="780" height="22" fill="#fff"/>
     </mask>
 
     <pattern id="scan" width="1" height="3" patternUnits="userSpaceOnUse">
@@ -51,7 +51,7 @@
     .warn    { fill: #A9670C; }
 
     @keyframes k0 {
-      from { transform: translateX(-72px); }
+      from { transform: translateX(-88px); }
       to   { transform: translateX(0); }
     }
     .r0 {
@@ -59,7 +59,7 @@
                  steps(8) 0.28s both;
     }
     @keyframes k1 {
-      from { transform: translateX(-432px); }
+      from { transform: translateX(-527px); }
       to   { transform: translateX(0); }
     }
     .r1 {
@@ -67,7 +67,7 @@
                  steps(48) 0.58s both;
     }
     @keyframes k2 {
-      from { transform: translateX(-135px); }
+      from { transform: translateX(-165px); }
       to   { transform: translateX(0); }
     }
     .r2 {
@@ -75,7 +75,7 @@
                  steps(15) 1.56s both;
     }
     @keyframes k3 {
-      from { transform: translateX(-414px); }
+      from { transform: translateX(-505px); }
       to   { transform: translateX(0); }
     }
     .r3 {
@@ -83,7 +83,7 @@
                  steps(46) 1.95s both;
     }
     @keyframes k4 {
-      from { transform: translateX(-72px); }
+      from { transform: translateX(-88px); }
       to   { transform: translateX(0); }
     }
     .r4 {
@@ -91,33 +91,28 @@
                  steps(8) 2.90s both;
     }
     @keyframes k5 {
-      from { transform: translateX(-630px); }
+      from { transform: translateX(-780px); }
       to   { transform: translateX(0); }
     }
     .r5 {
-      animation: k5 1.26s
-                 steps(70) 3.20s both;
+      animation: k5 1.28s
+                 steps(71) 3.20s both;
     }
     @keyframes blink { 0%, 49% { opacity: 1; } 50%, 100% { opacity: 0; } }
-    .caret {
-      fill: #0E7C5A;
-      /* Hidden until its line has been typed. `forwards` rather than `both`
-         keeps this base opacity during the delay -- `both` would apply the
-         keyframe's 0% state instead and leave a block glowing in empty space. */
-      opacity: 0;
-      animation: blink 1.06s steps(1) 4.68s infinite forwards;
-    }
+    /* The caret is the last glyph of the last line, so the reveal mask keeps it
+       hidden until that line has finished typing -- no delay to calculate, and
+       no chance of it floating in empty space. */
+    .caret { fill: #0E7C5A; animation: blink 1.06s steps(1) infinite; }
 
     @keyframes rule { from { transform: scaleX(0); } to { transform: scaleX(1); } }
     .rule { transform-origin: 28px 0; animation: rule .5s ease-out .05s both; }
 
     @keyframes rise { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
-    .status { animation: rise .45s ease-out 4.58s both; }
+    .status { animation: rise .45s ease-out 4.60s both; }
 
     @media (prefers-reduced-motion: reduce) {
       .r0, .r1, .r2, .r3, .r4, .r5, .r6, .r7, .r8,
-      .rule, .status { animation: none !important; transform: none !important; }
-      .caret { animation: none !important; }
+      .rule, .status, .caret { animation: none !important; transform: none !important; }
     }
   </style>
 
@@ -156,36 +151,35 @@
     </g>
     <g mask="url(#rev5)">
       <text class="mono" x="28" y="232"
-            textLength="630" lengthAdjust="spacing"><tspan class="warn">● </tspan><tspan class="lit">open to work</tspan><tspan class="out">  7 featured projects · 154 tests written · 36,674 lines</tspan></text>
+            textLength="639" lengthAdjust="spacing"><tspan class="warn">● </tspan><tspan class="lit">open to work</tspan><tspan class="out">  7 featured projects · 154 tests written · 36,674 lines</tspan><tspan class="caret">█</tspan></text>
     </g>
-    <rect class="caret" x="660" y="219" width="9" height="17"/>
 
     <!-- status bar -->
     <g class="status">
       <rect x="0" y="262" width="900" height="30" fill="#F1EEE7"/>
       <rect x="0" y="262" width="900" height="1" fill="#DED9CD"/>
-      <rect x="0" y="262" width="56" height="30"
+      <rect x="0" y="262" width="60" height="30"
             fill="#0E7C5A"/>
       <text class="mono" x="14" y="282" font-size="12"
-            textLength="28.8" lengthAdjust="spacing"
+            textLength="32.0" lengthAdjust="spacing"
             fill="#FFFFFF">MAIN</text>
-      <rect x="56" y="268" width="1" height="18" fill="#DED9CD"/>
-      <rect x="56" y="262" width="100" height="30"
+      <rect x="60" y="268" width="1" height="18" fill="#DED9CD"/>
+      <rect x="60" y="262" width="108" height="30"
             fill="none"/>
-      <text class="mono" x="70" y="282" font-size="12"
-            textLength="72.0" lengthAdjust="spacing"
+      <text class="mono" x="74" y="282" font-size="12"
+            textLength="80.0" lengthAdjust="spacing"
             fill="#6E6A5F">7 projects</text>
-      <rect x="156" y="268" width="1" height="18" fill="#DED9CD"/>
-      <rect x="156" y="262" width="92" height="30"
+      <rect x="168" y="268" width="1" height="18" fill="#DED9CD"/>
+      <rect x="168" y="262" width="100" height="30"
             fill="none"/>
-      <text class="mono" x="170" y="282" font-size="12"
-            textLength="64.8" lengthAdjust="spacing"
+      <text class="mono" x="182" y="282" font-size="12"
+            textLength="72.0" lengthAdjust="spacing"
             fill="#6E6A5F">154 tests</text>
-      <rect x="248" y="268" width="1" height="18" fill="#DED9CD"/>
-      <rect x="248" y="262" width="157" height="30"
+      <rect x="268" y="268" width="1" height="18" fill="#DED9CD"/>
+      <rect x="268" y="262" width="172" height="30"
             fill="none"/>
-      <text class="mono" x="262" y="282" font-size="12"
-            textLength="129.6" lengthAdjust="spacing"
+      <text class="mono" x="282" y="282" font-size="12"
+            textLength="144.0" lengthAdjust="spacing"
             fill="#6E6A5F">updated 2026-08-01</text>
     </g>
 
