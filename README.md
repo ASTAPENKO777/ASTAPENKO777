@@ -12,6 +12,7 @@
 | **[BlackmagicCam](https://github.com/ASTAPENKO777/blackmagic-cam)** · [live](https://blackmagiccam.vercel.app) | Paid guide storefront — card + USDT checkout, EN/RU/AR with RTL | Flask + Vercel | 7,921 LOC | — | 2026-08-02 |
 | **[Wine Marketplace](https://github.com/ASTAPENKO777/_VINO_)** | Catalog with filtering, cart, checkout, review moderation | Django 5 | 6,462 LOC | 116 | 2026-08-01 |
 | **[LeanPlate](https://github.com/ASTAPENKO777/leanplate-ios)** | Calorie targets from Mifflin-St Jeor, recipes, weight charts | SwiftUI + SwiftData | 3,788 LOC | — | 2026-08-01 |
+| **[AetherClimb](https://github.com/ASTAPENKO777/aether-climb-ios)** | Endless climber — Game Center, daily missions, skin shop, 36 skins | Swift + SpriteKit | 13,508 LOC | — | 2026-08-02 |
 | **[Tournament API](https://github.com/ASTAPENKO777/final_project)** | REST API with WebSocket chat, layered routers/models/schemas | FastAPI | 353 LOC | 38 | 2026-08-01 |
 | **[Endless Jumper](https://github.com/ASTAPENKO777/endless-jumper-ios)** | Arcade game with skin shop, unlockable maps, 8 languages | Swift + SpriteKit | 6,643 LOC | — | 2026-01-16 |
 | **[Crypto Bot](https://github.com/ASTAPENKO777/crupto_bot)** | Live prices, matplotlib charts, price alerts, UA/EN | python-telegram-bot | 716 LOC | — | 2026-08-01 |
@@ -36,9 +37,9 @@
 ```
 961656a  cassa-telegram-bot  Initial commit — Cassa Telegram bot
 a94ae2f  blackmagic-cam      Initial commit — BlackmagicCam
+adc162d  aether-climb-ios    Correct the asset note now that the repository is public
 3522d2e  lisova-hatuna       Deploy .env and survive a missing python-dotenv
 e9fa69f  lisova-hatuna       Initial commit — Lisova Hatyna booking site
-8f14643  leanplate-ios       Add nutrition tracking features, README and Xcode gitignore
 ```
 
 ### `$ contact`

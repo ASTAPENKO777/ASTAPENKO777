@@ -28,7 +28,7 @@
     </mask>
     <mask id="rev5">
       <rect class="r5" x="28" y="216"
-            width="780" height="22" fill="#fff"/>
+            width="791" height="22" fill="#fff"/>
     </mask>
 
     <pattern id="scan" width="1" height="3" patternUnits="userSpaceOnUse">
@@ -91,12 +91,12 @@
                  steps(8) 2.90s both;
     }
     @keyframes k5 {
-      from { transform: translateX(-780px); }
+      from { transform: translateX(-791px); }
       to   { transform: translateX(0); }
     }
     .r5 {
-      animation: k5 1.28s
-                 steps(71) 3.20s both;
+      animation: k5 1.30s
+                 steps(72) 3.20s both;
     }
     @keyframes blink { 0%, 49% { opacity: 1; } 50%, 100% { opacity: 0; } }
     /* The caret is the last glyph of the last line, so the reveal mask keeps it
@@ -108,7 +108,7 @@
     .rule { transform-origin: 28px 0; animation: rule .5s ease-out .05s both; }
 
     @keyframes rise { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
-    .status { animation: rise .45s ease-out 4.60s both; }
+    .status { animation: rise .45s ease-out 4.62s both; }
 
     @media (prefers-reduced-motion: reduce) {
       .r0, .r1, .r2, .r3, .r4, .r5, .r6, .r7, .r8,
@@ -151,7 +151,7 @@
     </g>
     <g mask="url(#rev5)">
       <text class="mono" x="28" y="232"
-            textLength="639" lengthAdjust="spacing"><tspan class="warn">● </tspan><tspan class="lit">open to work</tspan><tspan class="out">  9 featured projects · 154 tests written · 45,002 lines</tspan><tspan class="caret">█</tspan></text>
+            textLength="648" lengthAdjust="spacing"><tspan class="warn">● </tspan><tspan class="lit">open to work</tspan><tspan class="out">  10 featured projects · 154 tests written · 58,510 lines</tspan><tspan class="caret">█</tspan></text>
     </g>
 
     <!-- status bar -->
@@ -164,21 +164,21 @@
             textLength="32.0" lengthAdjust="spacing"
             fill="#06231B">MAIN</text>
       <rect x="60" y="268" width="1" height="18" fill="#222B38"/>
-      <rect x="60" y="262" width="108" height="30"
+      <rect x="60" y="262" width="116" height="30"
             fill="none"/>
       <text class="mono" x="74" y="282" font-size="12"
-            textLength="80.0" lengthAdjust="spacing"
-            fill="#6B7787">9 projects</text>
-      <rect x="168" y="268" width="1" height="18" fill="#222B38"/>
-      <rect x="168" y="262" width="100" height="30"
+            textLength="88.0" lengthAdjust="spacing"
+            fill="#6B7787">10 projects</text>
+      <rect x="176" y="268" width="1" height="18" fill="#222B38"/>
+      <rect x="176" y="262" width="100" height="30"
             fill="none"/>
-      <text class="mono" x="182" y="282" font-size="12"
+      <text class="mono" x="190" y="282" font-size="12"
             textLength="72.0" lengthAdjust="spacing"
             fill="#6B7787">154 tests</text>
-      <rect x="268" y="268" width="1" height="18" fill="#222B38"/>
-      <rect x="268" y="262" width="172" height="30"
+      <rect x="276" y="268" width="1" height="18" fill="#222B38"/>
+      <rect x="276" y="262" width="172" height="30"
             fill="none"/>
-      <text class="mono" x="282" y="282" font-size="12"
+      <text class="mono" x="290" y="282" font-size="12"
             textLength="144.0" lengthAdjust="spacing"
             fill="#6B7787">updated 2026-08-02</text>
     </g>

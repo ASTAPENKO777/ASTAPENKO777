@@ -59,6 +59,13 @@ projects:
     loc: 3788
     tests: 0
 
+  - repo: aether-climb-ios
+    title: AetherClimb
+    blurb: Endless climber — Game Center, daily missions, skin shop, 36 skins
+    stack: Swift + SpriteKit
+    loc: 13508
+    tests: 0
+
   - repo: final_project
     title: Tournament API
     blurb: REST API with WebSocket chat, layered routers/models/schemas
