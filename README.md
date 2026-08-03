@@ -35,11 +35,11 @@
 ### `$ git log --oneline -5`
 
 ```
+df855b6  blackmagic-cam      Fail loudly when the Payhip URL is unset
 961656a  cassa-telegram-bot  Initial commit — Cassa Telegram bot
 a94ae2f  blackmagic-cam      Initial commit — BlackmagicCam
 adc162d  aether-climb-ios    Correct the asset note now that the repository is public
 3522d2e  lisova-hatuna       Deploy .env and survive a missing python-dotenv
-e9fa69f  lisova-hatuna       Initial commit — Lisova Hatyna booking site
 ```
 
 ### `$ contact`
